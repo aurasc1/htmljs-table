@@ -6,7 +6,7 @@
     <!-- No se han agregado estilos, pero podría ser una buena idea -->
     <script>
         /* Datos a mostrar en la tabla */
-        nombres = [
+        var nombres = [
                 "Karina Sánchez",
                 "Ricardo Gonzales",
                 "Alejandro García",
@@ -21,8 +21,7 @@
                 "Patricia Sanchez",
                 "Braulio Medina",
                 "Enrique García",
-                "Alejandra Medina"
-        ];
+                "Alejandra Medina"];        
     </script>
 </head>
 <body>
@@ -31,12 +30,37 @@
             <h1>HTML+JS Table</h1>
         </header>
         <table>
+            <table>
+                <tr>
+                    <td>N°</td>
+                    <td>Nombre</td>
+                </tr>
+                <tr>
+                    <td>
+            <script>
+                for(i=1;i<=14;i+=1){;
+                                    document.write(i);
+                                   }
+                    </script>
+                    </td>
+                    <td>
+                        <script>
+                            for(i=0;i<=14;i+=1){;
+                                                document.write(nombres[i]);
+                                               }
+                        </script>
+                    </td> 
+                </tr>
             <!-- Posiblemente se tenga que colocar código HTML a mano que no
                  es necesario que sea colocado por javascript -->
+                 <tr><th>No</th><th>Nombre</th></tr>
             <script>
                 /* Remplazar la siguiente línea y colocar el código que genere
                    cada renglón de la tabla */
-                document.write(nombres);
+                   for(i=0; i<nombres.length;i+=1) {
+                     linea = "<tr><td>"+ (i+1) +"</td><td>"+ nombres[i] +"</td></tr>";
+                     document.write(linea);
+                   }
             </script>
         </table>
 
